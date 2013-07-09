@@ -36,5 +36,5 @@ class FizzBuzz
 end
 
 
-fizz= FizzBuzz.new('fizz_lines.txt')
+fizz= FizzBuzz.new(ARGV[0])
 fizz.load_file
