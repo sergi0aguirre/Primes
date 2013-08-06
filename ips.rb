@@ -1,17 +1,12 @@
 class Comparison
   def self.by_ip(a, b)
-    splitted_a=a.split('.')
-    splitted_b=b.split('.')
+    a=a.split('.')
+    b=b.split('.')
 
-    (0..3).each do |n|
-    	if splitted_a[n] != splitted_b[n] 
-    		return splitted_a[n].to_i > splitted_b[n].to_i ? -1 : 1
-    	end	
-    end	
+    4.times{  |n| return ( a[n].to_i > b[n].to_i ? -1 : 1 )   if a[n] !=  b[n]  }	
+    
   end
 end
-
-
 
 ips=["100.123.23.24",
 	"95.34.44.10",
@@ -21,7 +16,9 @@ ips=["100.123.23.24",
 	"70.89.34.23",
 	"80.91.23.12",
 	"90.35.23.35",	
-	"90.35.22.34",	
+	"90.35.22.34",
+	"90.38.22.34",
+	"90.40.22.34",	
 	"10.34.45.67",
 	"90.35.23.34"	
 	]
